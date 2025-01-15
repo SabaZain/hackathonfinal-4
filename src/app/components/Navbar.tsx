@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     
     <div className='flex justify-between align items-center w-full p-2 px-40'>
-        <div className='flex justify-between items-center gap-32 md:gap-10 lg:gap-10 '>
+        <div className='flex justify-between items-center gap-14 md:gap-10 lg:gap-10 '>
       <div className='md:flex lg:flex items-center md:gap-12 lg:gap-12'>
         <h1 className='text-[34px] font-bold text-secondary'>Hekto</h1>
         </div>
