@@ -7,7 +7,7 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 const Footer = () => {
   return (
     <div>
-    <div className='flex flex-col md:flex-row lg:flex-row gap-12 px-20 bg-[#EEEFFB] mt-8 p-4'>
+    <div className='flex flex-col md:flex-row lg:flex-row gap-12 px-20 bg-[#EEEFFB] mt-8 p-2'>
         <div>
         <h1 className='text-xl font-bold'>Hekto</h1>
         <input 
