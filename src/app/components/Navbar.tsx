@@ -20,8 +20,9 @@ const Navbar = () => {
   return (
     
     <div className='flex justify-between align items-center w-full p-2 px-40'>
-        <div className='flex justify-start items-center gap-2 md:gap-10 lg:gap-10 '>
-      <div className='flex md:flex lg:flex md:gap-12 lg:gap-12'>
+        
+        <div className='flex justify-between items-center gap-2 md:gap-10 lg:gap-10 '>
+      <div className='md:flex lg:flex md:gap-12 lg:gap-12'>
         <h1 className='text-[34px] font-bold text-secondary ml-[-12px]'>Hekto</h1>
         </div>
         <div className='md:hidden lg:hidden cursor-pointer mr-4' onClick={toggleMenu} aria-label="Toggle menu" aria-expanded={isOpen} aria-controls="mobile menu">

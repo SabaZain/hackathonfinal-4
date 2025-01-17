@@ -1,0 +1,68 @@
+Day-2  Hackathon  
+Marketplace Technical Foundation - E-Commerce Website
+Step-1  Technical Requirements
+To translate my business goals into technical requirements for a Next.js e-commerce website it is important to define specific needs for the front-end, back-end and third-party APIs.
+1. Frontend/User Interface(UI) Design
+Responsive design to ensure the website adapts to various screen sizes(Desktop, Mobile, Tablet).
+Branding and Theme - Custom design elements such as logos, color schemes to align with brand’s identity. Sanity CMS can be used to manage and update these elements dynamically.
+Clear and easy to use menus for product categories, user accounts, Cart etc. Sanity can manage navigation elements like categories and product lists.
+Use reusable UI components (buttons, input fields) across the site for a uniform look.
+
+2.Back-end/Sanity CMS
+Sanity CMS is used to create and manage dynamic product listings. Product details like images, descriptions, price are fetched from the CMS.
+Filtering and Sorting Functionality is integrated with Sanity’s structured content models so that users can easily filter products based on categories, price, ratings etc.
+Implement image optimization for faster loading, pulling product images directly from sanity.
+
+3.Third-Party APIs
+Use a third-party APIs for secure user login and sign-up.
+Allow users to manage their account information, view past orders and update personal details. This can be stored in a user database integrated with authentication provider.
+Implementing a persistent shopping cart using local storage to store the cart data.
+Use third-party APIs for payment processing.
+Once an order is completed get confirmation emails and update the user account with order history.
+Use third-party APIs like shipengine or shippo to provide shipping quotes, order tracking and shipment updates.
+
+By integrating Sanity CMS as the back-end and using third-party APIs for payment and shipping, the frontend will be highly dynamic and maintainable. This architecture ensures that my e-commerce website is scalable, user friendly and optimized for performance.
+
+Step 3 - Plan API Requirements
+Based on data schema, the API Endpoints needed includes the following:
+Endpoint Name: Product
+Method: GET
+Description: Fetch all products from sanity.
+Response: Product Details(Id, Image, Name, Description, Stock-Quantity, Price, Discount-Price, Rating).
+
+Endpoint Name: Order
+Method: POST
+Description: Create new order in sanity.
+Response: Order-Id, Product-Name, Quantity.
+
+Endpoint Name: Customer
+Method: POST
+Description: Create new customer by submitting the required details (Customer-Id, Name, Email, Phone-Number, Shipping Address).
+Response: Successful new customer creation.
+
+Endpoint Name: Shopping Cart
+Method: GET
+Description: This endpoint retrieves the shopping cart details for a specific customer based on their customer Id and returns list of items in the cart including Product-Name, quantity, price and Total-Price.
+Response: Product added to cart with quantity and price.
+POST method is used to update an item and PUT method is used to update the quantity of an item. Delete method is used to delete an item from the cart.
+
+Endpoint Name: Payment
+Method: POST
+Description: This endpoint processes the payment for the specified order using the given payment details(Order-Id, Payment-Method, Payment-Amount).
+
+Endpoint Name: Payment Status
+Method: GET
+Description: This endpoint retrieves the payment status for a specific payment using the Payment-Id.
+Response: Display successful transaction.
+
+Endpoint Name: Shipping Address
+Method: POST
+Description: This endpoint is used to add a new shipping address for a customer. This address will be stored and associated with the customer’s account.
+Response: Created new shipping address of new customer.
+
+Endpoint Name: Delivery-Zone
+Method: GET
+Description: This endpoint retrieves all available delivery zones that are active. A delivery zone typically represents a geographical region such as country, city, state.
+
+Sanity Schema
+A sanity schema defines the structure of content in sanity.io, specifying document types and their fields(example- text,images,references). It ensures consistent and flexible content management through custom data models.
