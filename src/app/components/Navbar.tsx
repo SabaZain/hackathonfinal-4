@@ -20,11 +20,11 @@ const Navbar = () => {
   return (
     
     <div className='flex justify-between align items-center w-full p-2 px-40'>
-        <div className='flex justify-between items-center gap-32 md:gap-10 lg:gap-10 '>
-      <div className='md:flex lg:flex items-center md:gap-12 lg:gap-12'>
-        <h1 className='text-[34px] font-bold text-secondary'>Hekto</h1>
+        <div className='flex justify-start items-center gap-2 md:gap-10 lg:gap-10 '>
+      <div className='flex md:flex lg:flex md:gap-12 lg:gap-12'>
+        <h1 className='text-[34px] font-bold text-secondary ml-[-12px]'>Hekto</h1>
         </div>
-        <div className='md:hidden lg:hidden cursor-pointer' onClick={toggleMenu} aria-label="Toggle menu" aria-expanded={isOpen} aria-controls="mobile menu">
+        <div className='md:hidden lg:hidden cursor-pointer mr-4' onClick={toggleMenu} aria-label="Toggle menu" aria-expanded={isOpen} aria-controls="mobile menu">
         <IoMenu size={30} />
         </div>
         <ul className='hidden md:flex lg:flex items-center gap-2 md:gap-6 lg:gap-6'>
@@ -41,7 +41,7 @@ const Navbar = () => {
         {isOpen && (
             
             <div id="mobile-menu" className='md:hidden lg:hidden bg-orange-400 p-1 rounded-md'>
-            <ul className='flex flex-col gap-2'>
+            <ul className='flex-col gap-2'>
             <li className='menuLink hover:text-blue-900'><Link href='/' onClick={() => setIsOpen(false)}>Home</Link></li>
              <li className='menuLink hover:text-blue-900'><Link href='/Products' onClick={() => setIsOpen(false)}>Products</Link></li>
               <li className='menuLink hover:text-blue-900'><Link href='/Blog' onClick={() => setIsOpen(false)}>Blog</Link></li>
