@@ -10,7 +10,7 @@ import Banner from './components/Banner';
 import LatestBlog from './components/LatestBlog';
 import TopCategories from './components/TopCategories';
 import NewArrival from './components/NewArrival';
-import Products from './Products/page';
+import Products from '@/app/Products/page'
 
 const HomePage = () => {
   return (

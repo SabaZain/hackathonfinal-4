@@ -4,6 +4,7 @@ import productData from "@/utils/productData";
 import ProductCard, { IProduct} from './productCard';
 
 
+
 const tabsData: string[] = ["ALL"];
 
 const NewArrival = () => {
@@ -68,7 +69,8 @@ const handleTab = (index: number) => {
         img={item.img} 
         name={item.name}
         price={item.price}
-        category={item.category}
+        quantity={item.quantity}
+        
         
         />
         ))}

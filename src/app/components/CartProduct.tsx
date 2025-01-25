@@ -4,10 +4,10 @@ import { removeFromCart } from "@/redux/features/cartSlice";
 import Image from "next/image";
 
 interface propsType {
-    id: number;
+    id: number ;
     img: string;
     name: string;
-    price: number;
+    price: string;
     quantity: number;
 }
 

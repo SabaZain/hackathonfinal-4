@@ -9,14 +9,15 @@ import { addToCart } from '@/redux/features/cartSlice';
 import { useAppDispatch } from '@/redux/features/hooks';
 
 export interface IProduct {
-  id: number;
+  id: number | string;
   img: string;
   name: string;
-  price: number;
-  category:string[];
+  price: string;
+  quantity: number;
+  
 }
 
-const ProductCard = ({id, img, name, price, category}: IProduct) => {
+const ProductCard = ({id, img, name, price}: IProduct) => {
 
   const router = useRouter();
   const dispatch = useAppDispatch()
@@ -115,7 +116,7 @@ const ProductCard = ({id, img, name, price, category}: IProduct) => {
 return (
     <div className='bg-slate-400 border border-black rounded-sm shadow-inner shadow-slate-400 mx-4'>
       <div className=' border-spacing-y-4 bg-white rounded-sm relative group cursor-pointer' 
-      onClick={() => router.push(`/details/${id}`)}>
+      onClick={() => router.push(`/Details/${id}`)}>
         <Image 
         className='w-full h-60' 
         width={800} 
@@ -139,7 +140,7 @@ return (
       </div>
     </div>
     {getRating()}
-    <h1>{category}</h1>
+    
 <h2 className='font-medium pb-3 hover:text-accent'>{name}</h2>
 <p className='text-gray-800 font-light'>${price}.00</p>
   </div>

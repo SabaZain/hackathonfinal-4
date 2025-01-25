@@ -1,11 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface IProduct{
-    id: number;
+    id: number | string;
     name: string;
     img: string;
-    price: number;
+    price: string;
     quantity: number;
+    
 }
 
 const initialState: Array<IProduct> = [];
@@ -29,8 +30,11 @@ removeFromCart: (state, action: PayloadAction<number> ) => {
     const id = action.payload;
     return state.filter((item) => item.id !== id);
    },
+   clearCart: () => {
+    return [];
+   },
   },
 });
 
-export const {addToCart, removeFromCart} = cartSlice.actions;
+export const {addToCart, removeFromCart, clearCart} = cartSlice.actions;
 export default cartSlice.reducer;
