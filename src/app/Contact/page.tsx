@@ -72,17 +72,7 @@ const ContactPage = () => {
               required
               />
             </div>
-            <div className='flex flex-col gap-1 p-1 ml-14'>
-            <label htmlFor='msg'>Subject</label>
-            <textarea
-            className='h-[50px] w-[350px] bg-gray-400 border border-black rounded-md p-1' 
-            id='message'
-            rows={2}
-            value={formData.message}
-            onChange={handleChange}
-            required
-            ></textarea>
-            </div>
+           
             <div className='flex flex-col gap-1 p-1 ml-14'>
             <label htmlFor='msg'>Type Your Message</label>
             <textarea
