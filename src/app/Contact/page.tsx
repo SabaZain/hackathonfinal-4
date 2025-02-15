@@ -50,7 +50,7 @@ const ContactPage = () => {
         <br/> tristique amet erat vitae eget dolor los vitae lobortis quis bibendum quam.</p>
         <div className='flex flex-col md:flex-row lg:flex-row'>
       <form onSubmit={handleSubmit} className='w-full max-w-xl mt-3'>
-              <div className='flex flex-col gap-1 p-1 ml-14'>
+              <div className='flex flex-col gap-1 p-1 ml-0.5'>
               <label htmlFor='name'>Your Name</label>
               <input 
               type='text'
@@ -61,7 +61,7 @@ const ContactPage = () => {
               required
               />
             </div>
-            <div className='flex flex-col gap-1 p-1 ml-14'>
+            <div className='flex flex-col gap-1 p-1 ml-0.5'>
             <label htmlFor='email'>Your Email</label>
               <input 
               type='email'
@@ -73,7 +73,7 @@ const ContactPage = () => {
               />
             </div>
            
-            <div className='flex flex-col gap-1 p-1 ml-14'>
+            <div className='flex flex-col gap-1 p-1 ml-0.5'>
             <label htmlFor='msg'>Type Your Message</label>
             <textarea
             className='h-[150px] w-[350px] bg-gray-400 border border-black rounded-md p-1' 
@@ -99,7 +99,7 @@ const ContactPage = () => {
             )}
  
       <div>
-        <Image src="/Image/contact.svg" alt="contact image" width={400} height={400}/>
+        <Image src="/Image/contact.svg" alt="contact image" width={400} height={400} className="px-2"/>
       </div>
       </div>
     </div>
